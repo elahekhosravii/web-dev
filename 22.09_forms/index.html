@@ -1,0 +1,95 @@
+<!--
+    Type "html:5" to build this initial template automatically!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> My first Form </h1>
+    <form action="action_page.php" target="_blank" method="post">
+        <!--
+            Fieldset puts content in a box, we can give it a name with 'legend'
+        -->
+        <fieldset>
+            <legend> Name </legend>
+            <div>
+                <label for="fname"> First name: </label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name"/>
+            </div>
+
+            <div>
+                <label for="lname"> Last name: </label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name"/>
+            </div>
+
+        </fieldset>
+
+        <div>
+            <label for="password"> Password: </label>
+            <input type="password" id="password" name="password" placeholder="Your password"  />
+        </div>
+
+        <fieldset>
+            <legend> Personal Favorites </legend>
+            <div>
+                <!--
+                    Checkbox,
+                -->
+                <strong> Your hobbies: </strong>
+                <div>
+                    <input type="checkbox" id="cbSwimming" name="swimming">
+                    <label for="cbSwimming"> Swimming </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cbCooking" name="cooking">
+                    <label for="cbCooking"> Cooking </label>
+                </div>
+
+            </div>
+
+            <div>
+                <!--
+                    Radio: can only be on/off. if we call both inputs with the same name,
+                    here name="food", then radio will only allow one to be selected
+
+                    name ... name of the variable
+                    id ... id in the page, has to be unique within the page,
+                            but is not the name of the variable itself, rather a "nickname"
+                -->
+                <strong> Your favorite food: </strong>
+                <div>
+                    <input type="radio" id="rPizza" name="food">
+                    <label for="rPizza"> Pizza </label>
+                </div>
+                <div>
+                    <input type="radio" id="rBurger" name="food">
+                    <label for="rBurger"> Burger </label>
+                </div>
+            </div>
+
+            <div>
+                <label for="lname"> A number please (1-10): </label>
+                <input type="number" id="nbr" name="nbr" value="5" min="1" max="10">
+            </div>
+
+        </fieldset>
+
+
+
+
+        <div>
+            <!-- Submit should open a new page! Why is it not working? -->
+            <input type="submit" id="x" name="btnSubmit" value="Submit!"/>
+            <input type="reset" id="reset" name="btnReset" value="Reset"/>
+        </div>
+ 
+
+    </form>
+</body>
+</html>
