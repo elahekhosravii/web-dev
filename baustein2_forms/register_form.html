@@ -4,9 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Register Formular</title>
 
+    <style>
+
+        /*
+        Color Palette:
+            HEX: #deeaee
+            HEX: #b1cbbb
+            HEX: #eea29a
+            HEX: #c94c4c
+
+        */
+
+        body {
+            background-color:  #deeaee;
+        }
+
+        /* selecting by element */
+        h1 {
+            margin: 10px;
+            color: #eea29a;
+            font-size: 44px;
+        }
+
+        /* selecting by element */
+        legend {
+            color: #c94c4c;
+            font-size: 20px;
+        }
+
+        /* selecting by id attribute */
+        #btn {
+            color: #c94c4c;
+            font-size: 30px;
+        }
+
+        fieldset {
+            width: 500px;
+            height: 150px;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+ <!--
+    a. ErstellenSieeinRegistrierungsformular-beiderRegistrierung sind (zumindest) folgende Daten anzugeben:
+        i. Anrede
+        ii. Vorname
+        iii. Nachname
+        iv. E-Mail-Adresse
+        v. Username
+        vi. Passwort (muss 2x eingegeben werden)
+        b. ÜberprüfenSiealleeingegebenenDatenclientseitig(mit speziellen HTML5 Tags voreinschränken).
+-->
+
+<body>
+    <h1>Create your account</h1>
+
+    <form action="/action_page.php" target="_blank" method="post">
+        <div>
+            <fieldset>
+                <legend><strong>Your personal information</strong></legend>
+                <div>
+                    <em>How would you like to be called?</em><br>
+
+                    <input type="radio" id="address_mr" name="form_of_address">
+                    <label for="address_mr">Mr.</label><br>
+
+                    <input type="radio" id="address_mrs" name="form_of_address">
+                    <label for="address_mrs">Mrs.</label><br>
+
+                    <input type="radio" id="address_ms" name="form_of_address">
+                    <label for="address_ms">Ms.</label><br>
+                </div>
+                <div>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Your first name"/><br>
+
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Your last name"/><br>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><strong>Your account credentials</strong></legend>
+                <div>
+                    <label for="email_address">Email:</label>
+                    <input type="text" id="email_address" name="email_address" placeholder="Your email address"><br>
+
+                    <label for="new_username">Username:</label>
+                    <input type="text" id="new_username" name="new_username" placeholder="Your username"><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Your password"/><br>
+                    <label for="password_repeated">Confirm your password:</label>
+                    <input type="password" id="password_repeated" name="password_repeated" placeholder="Confirm your password"/><br>
+                </div>
+            </fieldset>
+
+
+        <div>
+            <!-- Submit should open a new page! Why is it not working? -->
+            <input type="submit" id="btn" name="btnSubmit" value="Submit"/>
+            <input type="reset" id="btn" name="btnReset" value="Reset"/>
+        </div>
+        </div>
+
+
+
+
+        <!-- TODO: Uberpruefung der Daten!! -->
+
+
+    </form>
 </body>
 </html>
